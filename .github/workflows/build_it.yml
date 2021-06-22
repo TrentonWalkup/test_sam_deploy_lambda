@@ -1,12 +1,13 @@
 name: 'Deploy SAM Stack to Production'
 on:
-  pull_requests:
-    if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
+  pull_request:
     branches:
       - develop
       - main
+    type: [closed]
 
 jobs:
+  if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
   deploy:
     runs-on: ubuntu-latest
     steps:
