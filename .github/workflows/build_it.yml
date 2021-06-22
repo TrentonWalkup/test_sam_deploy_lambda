@@ -4,7 +4,7 @@ on:
     branches:
       - develop
       - main
-    type: [closed]
+    types: [closed]
 
 jobs:
   deploy:
