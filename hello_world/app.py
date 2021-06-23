@@ -40,4 +40,4 @@ def lambda_handler(event, context):
             # "location": ip.text.replace("\n", "")
         }),
     }
-#test7
+#test8
